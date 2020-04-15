@@ -203,9 +203,19 @@ h2 {
   padding: 20px;
   margin: 25px auto;
 }
+@media (max-width: 500px) {
+  .home {
+    flex-direction: column;
+  }
+}
 .home img {
   object-fit: cover;
   width: 50%;
+}
+@media (max-width: 500px) {
+  .home img {
+    width: 100%;
+  }
 }
 .home div {
   display: flex;

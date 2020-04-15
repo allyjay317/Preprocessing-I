@@ -155,9 +155,16 @@ h2{
 .home{
 	//height: 100vw;
 	.bubble(lightgray, row, right, 25px, 100%);
+	@media @mobile {
+		flex-direction: column;
+	}
 	img{
 		object-fit: cover;
 		width: 50%;
+		@media @mobile {
+			width: 100%;
+		}
+		
 	}
 	div{
 		.bubble(gray, column, left, 0px, 50%);
