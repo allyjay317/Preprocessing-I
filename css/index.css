@@ -295,6 +295,9 @@ h2 {
   padding: 20px;
   margin: 25px auto;
 }
+.contact h1 {
+  margin-bottom: 20px;
+}
 .contact .text {
   display: flex;
   flex-direction: column;
@@ -318,4 +321,11 @@ h2 {
 .contact .icons {
   display: flex;
   justify-content: space-around;
+}
+.contact .icons a {
+  display: flex;
+  justify-content: center;
+}
+.contact .icons img {
+  width: 50%;
 }
