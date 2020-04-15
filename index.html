@@ -4,12 +4,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>My Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+  <title>Allison Usher</title>
 
   <link rel="stylesheet" href="css/index.css">
 
-  <script src="/javascript/main.js"></script>
+  <script>
+    var content = document.getElementById("menu");
+    function collapse(){
+      var content = document.getElementById("menu");
+        if(content.style.display == "flex"){
+            content.style.display = "none";
+        } else {
+            content.style.display = "flex";
+        }
+        
+    }
+    var mq = window.matchMedia('(min-width:500px');
+    mq.addListener(function(changed){
+      var content = document.getElementById("menu");
+      if(changed.matches){
+        content.style.display = "flex";
+        content.style.justifyContent = "space-around";
+        content.style.flexDirection = "row";
+      }
+      else {
+       content.style.position = "relative";
+			  content.style.flexDirection = "column";
+			  content.style.justifyContent = "center";
+			  content.style.display = "none";
+			  content.style.fontSize = "5rem";
+      }
+    });
+  </script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -22,7 +49,7 @@
     <div id="menu">
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="http://allyjay317.github.io">Portfolio</a>
+      <a href="https://allyjay317.github.io/#work">Portfolio</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -58,20 +85,30 @@
       </div>
     </section>
   </article>
-  <article id="Contact">
+  <article id="contact">
      <section class="contact">
       <h1>Contact me</h1>
-        Name
-        <input type="text">
-        Email
-        <input type="email">
-        Message
-        <textarea></textarea>
+        <div class="line">
+          <div class="text">
+            Name
+            <input type="text">
+          </div>
+          <div class="text">
+            Email
+            <input type="email">
+          </div>
+          
+        </div>
+        
+        <div class="textbox">
+          <p>Message</p>
+          <textarea></textarea>
+        </div>
         <div class="icons">
-          <input type="image" src="img/Linkedin_2.png">
-          <input type="image" src="img/Github_2.png">
-          <input type="image" src="img/Facebook_2.png">
-          <input type="image" src="img/Twitter_2.png">
+          <a href="https://www.linkedin.com/in/allison-usher-1ba0a2b2/"> <img src="img/Linkedin_2.png"></a>
+          <a href="https://github.com/allyjay317"> <img src="img/Github_2.png"></a>
+          <a href="https://www.facebook.com/allison.usher.96"> <img src="img/Facebook_2.png"></a>
+          <a href="https://twitter.com/allisonusher317"> <img src="img/Twitter_2.png"></a>
         </div>
       </section>
       

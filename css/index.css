@@ -134,8 +134,13 @@ html,
 body {
   height: 100%;
 }
+html {
+  font-family: 'Oswald', sans-serif;
+  background-color: steelblue;
+}
 h1 {
   font-size: 2rem;
+  font-weight: 800;
 }
 h2 {
   font-size: 1.25rem;
@@ -151,7 +156,7 @@ h2 {
   flex-flow: row nowrap;
   justify-content: space-around;
   align-content: center;
-  background-color: black;
+  background-color: #491313;
   border-radius: 0px;
   padding: 20px;
   margin: 25px auto;
@@ -162,6 +167,7 @@ h2 {
     position: relative;
     flex-direction: column;
     justify-content: center;
+    display: none;
   }
 }
 .topNav #collapse {
@@ -175,14 +181,15 @@ h2 {
   }
 }
 .topNav a {
+  color: whitesmoke;
+  text-decoration: none;
   display: block;
   margin: 1rem 2rem;
   font-size: 1.5rem;
 }
 @media (max-width: 500px) {
-  .topNav a {
-    display: none;
-    font-size: 5rem;
+  .topNav {
+    position: relative;
   }
 }
 .home {
@@ -210,6 +217,7 @@ h2 {
   border-radius: 0px;
   padding: 20px;
   margin: 25px auto;
+  padding-right: 30px;
 }
 .home h2 {
   margin-bottom: 20px;
@@ -221,35 +229,60 @@ h2 {
   justify-content: space-between;
   align-content: center;
   background-color: lightgray;
-  border-radius: 0px;
+  border-radius: 10px;
   padding: 20px;
   margin: 25px auto;
+  margin-right: 25%;
+  align-items: flex-start;
 }
 .about .work {
   height: 100%;
   width: 100%;
   border: 1px solid black;
-  margin: auto 10px;
+  margin: 10px;
 }
 .about .work ul {
   background-color: white;
 }
+.about .work ul li {
+  padding: 5px;
+}
 .about .work ul .odd {
-  background-color: black;
-  color: white;
+  background-color: lightblue;
+  color: black;
+}
+@media (max-width: 500px) {
+  .about .work {
+    margin: 10px;
+    padding: 10px auto;
+  }
 }
 .about .skill {
   height: 100%;
   width: 100%;
   border: 1px solid black;
-  margin: auto 10px;
+  margin: 10px;
 }
 .about .skill ul {
   background-color: white;
 }
+.about .skill ul li {
+  padding: 5px;
+}
 .about .skill ul .odd {
-  background-color: black;
-  color: white;
+  background-color: lightblue;
+  color: black;
+}
+@media (max-width: 500px) {
+  .about .skill {
+    margin: 10px;
+    padding: 10px auto;
+  }
+}
+@media (max-width: 500px) {
+  .about {
+    flex-direction: column;
+  }
 }
 .contact {
   display: flex;
@@ -261,4 +294,28 @@ h2 {
   border-radius: 25px;
   padding: 20px;
   margin: 25px auto;
+}
+.contact .text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.contact .line {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.contact p {
+  margin-left: 12.5%;
+}
+.contact .textbox {
+  margin-bottom: 50px;
+}
+.contact .textbox textarea {
+  width: 75%;
+  margin-left: 12.5%;
+}
+.contact .icons {
+  display: flex;
+  justify-content: space-around;
 }

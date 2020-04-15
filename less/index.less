@@ -59,6 +59,8 @@ html, body {
 
 //variables
 @mobile: ~"(max-width: 500px)";
+@desktop: ~"(min-width: 500px)";
+@textColor: black;
 
 //mixins
 .bubble (@bgColor, @direction, @justify, @border-radius, @width){
@@ -76,22 +78,34 @@ html, body {
 	height: 100%;
 	width: 100%;
 	border: 1px solid black;
-	margin: auto 10px;
+	margin: 10px;
 	ul{
 		background-color: white;
-		.odd{
-			background-color: black;
-			color: white;
-
+		li{
+			padding: 5px;
 		}
+		.odd{
+			background-color: lightblue;
+			color: black;
+		}
+	}
+	@media @mobile {
+		margin: 10px;
+		padding: 10px auto;
 	}
 }
 
 
 //css
 
+html{
+	font-family: 'Oswald', sans-serif;
+	background-color: steelblue;
+}
+
 h1{
 	font-size:2rem;
+	font-weight: 800;
 }
 h2{
 	font-size: 1.25rem;
@@ -104,13 +118,16 @@ h2{
 	top:0;
 	width: 100%;
 	#menu{
-		.bubble(black, row, space-around, 0px, 100%);
+		.bubble(rgb(73, 19, 19), row, space-around, 0px, 100%);
+		
 		align-items: center;
 		@media @mobile{
 			position: relative;
 			flex-direction: column;
 			justify-content: center;
+			display: none;
 		}
+		
 	}
 	
 	#collapse{
@@ -122,13 +139,15 @@ h2{
 		}
 	}
 	a{
+		color: whitesmoke;
+		text-decoration: none;
 		display: block;
 		margin: 1rem 2rem;
 		font-size: 1.5rem;
-		@media @mobile{
-			display: none;
-			font-size: 5rem;
-		}
+		
+	}
+	@media @mobile{
+		position: relative;
 	}
 	
 }
@@ -142,6 +161,7 @@ h2{
 	}
 	div{
 		.bubble(gray, column, left, 0px, 50%);
+		padding-right: 30px;
 		
 	}
 	h2{
@@ -151,7 +171,9 @@ h2{
 
 .about{
 	//height: 100vw;
-	.bubble(lightgray, row, space-between, 0px, 100%);
+	.bubble(lightgray, row, space-between, 10px, 75%);
+	margin-right: 25%;
+	align-items: flex-start;
 	.work{
 		.table();
 	}
@@ -159,8 +181,35 @@ h2{
 		.table();
 	}
 	//height: 100vs;
+	@media @mobile{
+		flex-direction: column;
+	}
 }
 
 .contact{
 	.bubble(lightgray, column, center, 25px, 100%);
+	.text{
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+	}
+	.line{
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 20px;
+	}
+	p{
+		margin-left: 12.5%;
+	}
+	.textbox{
+		margin-bottom: 50px;
+		textarea{
+			width: 75%;
+			margin-left: 12.5%;
+		}
+	}
+	.icons{
+		display: flex;
+		justify-content: space-around;
+	}
 }
