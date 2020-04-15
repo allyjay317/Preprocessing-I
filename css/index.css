@@ -134,7 +134,131 @@ html,
 body {
   height: 100%;
 }
-nav {
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+.topNav {
   position: sticky;
+  top: 0;
+  width: 100%;
+}
+.topNav #menu {
   display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-content: center;
+  background-color: black;
+  border-radius: 0px;
+  padding: 20px;
+  margin: 25px auto;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .topNav #menu {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.topNav #collapse {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+}
+@media (max-width: 500px) {
+  .topNav #collapse {
+    display: block;
+  }
+}
+.topNav a {
+  display: block;
+  margin: 1rem 2rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .topNav a {
+    display: none;
+    font-size: 5rem;
+  }
+}
+.home {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: right;
+  align-content: center;
+  background-color: lightgray;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 25px auto;
+}
+.home img {
+  object-fit: cover;
+  width: 50%;
+}
+.home div {
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  justify-content: left;
+  align-content: center;
+  background-color: gray;
+  border-radius: 0px;
+  padding: 20px;
+  margin: 25px auto;
+}
+.home h2 {
+  margin-bottom: 20px;
+}
+.about {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+  background-color: lightgray;
+  border-radius: 0px;
+  padding: 20px;
+  margin: 25px auto;
+}
+.about .work {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  margin: auto 10px;
+}
+.about .work ul {
+  background-color: white;
+}
+.about .work ul .odd {
+  background-color: black;
+  color: white;
+}
+.about .skill {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  margin: auto 10px;
+}
+.about .skill ul {
+  background-color: white;
+}
+.about .skill ul .odd {
+  background-color: black;
+  color: white;
+}
+.contact {
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  background-color: lightgray;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 25px auto;
 }

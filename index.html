@@ -3,10 +3,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+
+  <script src="/javascript/main.js"></script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,30 +17,63 @@
 </head>
 
 <body>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="http://allyjay317.github.io">Portfolio</a>
-    <a href="#contact">Contact</a>
+  <nav class="topNav">
+    <input type="image" src="img/Hamburger_icon.svg.png" id="collapse" onclick="collapse()"></input>
+    <div id="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="http://allyjay317.github.io">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
   <article id="home">
-    <section>
-      <h1>Allison Usher</h1>
-      <h2>Full Stack Developer</h2>
+    <section class="home">
+      <img src="img/headshot.JPG">
+      <div>
+        <h1>Allison Usher</h1>
+        <h2>Full Stack Developer</h2>
+        <p>Esse fugiat duis in sint nulla anim adipisicing amet enim nisi anim irure. Et nostrud voluptate cupidatat sit enim in quis do proident excepteur duis sint excepteur. Fugiat occaecat sit nisi non. Ex ea magna adipisicing ea laborum laboris. Voluptate esse elit deserunt consequat eu minim laboris magna laboris consectetur do. Consectetur cillum proident dolore irure Lorem ad deserunt ea pariatur nisi et eiusmod incididunt.</p>
+      </div>
     </section>
   </article>
   <article id="about">
-    <section>
-      <div>
+    <section class="about">
+      <div class="work">
         <h1>Work History</h1>
+        <ul>
+          <li class="odd">In laboris minim tempor aliqua nostrud.</li>
+          <li class="even">Commodo commodo proident fugiat eiusmod consequat ullamco incididunt irure sint ea.</li>
+          <li class="odd">Quis enim excepteur aliquip est enim culpa.</li>
+          <li class="even">Aute mollit minim veniam labore.</li>
+        </ul>
       </div>
-      <div>
+      <div class="skill">
         <h1>Skills</h1>
+        <ul>
+          <li class="odd">HTML-5</li>
+          <li class="even">javascript</li>
+          <li class="odd">Java</li>
+          <li class="even">C#</li>
+        </ul>
       </div>
     </section>
   </article>
   <article id="Contact">
+     <section class="contact">
       <h1>Contact me</h1>
+        Name
+        <input type="text">
+        Email
+        <input type="email">
+        Message
+        <textarea></textarea>
+        <div class="icons">
+          <input type="image" src="img/Linkedin_2.png">
+          <input type="image" src="img/Github_2.png">
+          <input type="image" src="img/Facebook_2.png">
+          <input type="image" src="img/Twitter_2.png">
+        </div>
+      </section>
       
   </article>
 </body>

@@ -57,8 +57,110 @@ html, body {
 	height: 100%;
 }
 
-nav {
-	position: sticky;
+//variables
+@mobile: ~"(max-width: 500px)";
+
+//mixins
+.bubble (@bgColor, @direction, @justify, @border-radius, @width){
 	display: flex;
+	width: 100%;
+	flex-flow: @direction nowrap;
+	justify-content: @justify;
+	align-content: center;
+	background-color: @bgColor;
+	border-radius: @border-radius;
+	padding: 20px;
+	margin: 25px auto;
+}
+.table(){
+	height: 100%;
+	width: 100%;
+	border: 1px solid black;
+	margin: auto 10px;
+	ul{
+		background-color: white;
+		.odd{
+			background-color: black;
+			color: white;
+
+		}
+	}
 }
 
+
+//css
+
+h1{
+	font-size:2rem;
+}
+h2{
+	font-size: 1.25rem;
+	
+}
+
+.topNav {
+	position: sticky;
+	
+	top:0;
+	width: 100%;
+	#menu{
+		.bubble(black, row, space-around, 0px, 100%);
+		align-items: center;
+		@media @mobile{
+			position: relative;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+	
+	#collapse{
+		display: none;
+		width: 2rem;
+		height: 2rem;
+		@media @mobile{
+			display: block;
+		}
+	}
+	a{
+		display: block;
+		margin: 1rem 2rem;
+		font-size: 1.5rem;
+		@media @mobile{
+			display: none;
+			font-size: 5rem;
+		}
+	}
+	
+}
+
+.home{
+	//height: 100vw;
+	.bubble(lightgray, row, right, 25px, 100%);
+	img{
+		object-fit: cover;
+		width: 50%;
+	}
+	div{
+		.bubble(gray, column, left, 0px, 50%);
+		
+	}
+	h2{
+		margin-bottom: 20px;
+	}
+}
+
+.about{
+	//height: 100vw;
+	.bubble(lightgray, row, space-between, 0px, 100%);
+	.work{
+		.table();
+	}
+	.skill{
+		.table();
+	}
+	//height: 100vs;
+}
+
+.contact{
+	.bubble(lightgray, column, center, 25px, 100%);
+}
